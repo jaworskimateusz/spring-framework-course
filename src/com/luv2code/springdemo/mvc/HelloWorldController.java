@@ -1,9 +1,14 @@
 package com.luv2code.springdemo.mvc;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/hello")
 public class HelloWorldController {
 	
 	@RequestMapping("/showForm")
@@ -13,6 +18,26 @@ public class HelloWorldController {
 	
 	@RequestMapping("/processForm")
 	public String processForm() {
+		return "helloworld";
+	}
+	
+	@RequestMapping("/processFormTwo")
+	public String takeItToUpper(HttpServletRequest request, 
+								Model model) {
+		String name = request.getParameter("studentName")
+							 .toUpperCase();
+		model.addAttribute("textUpper", "Yo " + name + "!");
+		
+		return "helloworld";
+	}
+	
+	@RequestMapping("/processFormThree")
+	public String takeNameToUpper(
+			@RequestParam("studentName") String name, 
+			Model model) {
+		model.addAttribute("message", "Welcome " 
+							+ name.toUpperCase());
+		
 		return "helloworld";
 	}
 
