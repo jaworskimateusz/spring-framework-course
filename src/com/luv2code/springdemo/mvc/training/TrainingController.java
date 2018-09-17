@@ -10,9 +10,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/training")
 public class TrainingController {
 
-	@RequestMapping("/")
+	@RequestMapping("/car")
 	public String getHomePage() {
 		return "index";
 	}

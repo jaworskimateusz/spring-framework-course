@@ -11,7 +11,8 @@
 Welcome in world of Spring!
 
 <img src="${pageContext.request.contextPath}/resources/images/spring-logo.png"> 
-The message: ${textUpper}
+The message: ${textUpper} <br>
+Message to lower: ${message}
 
 <!-- Student name: ${param.studentName}  -->
 
