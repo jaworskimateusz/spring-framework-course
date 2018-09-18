@@ -32,12 +32,10 @@ public class HelloWorldController {
 	}
 	
 	@RequestMapping("/processFormThree")
-	public String takeNameToUpper(
-			@RequestParam("studentName") String name, 
-			Model model) {
-		model.addAttribute("message", "Welcome " 
-							+ name.toUpperCase());
-		
+	public String transformToUppercase(@RequestParam("studentName")
+										String name,
+										Model model) {
+		model.addAttribute("message", name.toUpperCase());
 		return "helloworld";
 	}
 
