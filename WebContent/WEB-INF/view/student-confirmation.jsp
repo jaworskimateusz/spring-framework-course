@@ -5,10 +5,11 @@
 </head>
 <body>
 
-	<h2>Confirmation</h2>
+	<h2>Confirmation</h2> <hr>
 	
 	The student is confirmed: ${student.firstName} 
 						      ${student.lastName}
+						      ${student.country}
 
 </body>
 </html>
