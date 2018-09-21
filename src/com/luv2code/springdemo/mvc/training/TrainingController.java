@@ -1,13 +1,15 @@
 package com.luv2code.springdemo.mvc.training;
 
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
+//import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/training")
@@ -19,10 +21,11 @@ public class TrainingController {
 	}
 	
 	@RequestMapping("/carForm")
-	public String showForm() {
+	public String showForm(Model model) {
+		model.addAttribute("car", new Car());
 		return "form";
 	}
-	
+	/*
 	@RequestMapping("/submitData")
 	public String submitData(HttpServletRequest request,
 							 Model model) {
@@ -43,4 +46,23 @@ public class TrainingController {
 		
 		return "result";
 	}
+	
+	@RequestMapping("/submitData")
+	public String submitData(@RequestParam("carBrand")
+								String brand,
+								Model model) {
+		model.addAttribute("brand", brand);
+		return "result";
+	}
+	*/
+	
+	@RequestMapping("/submitData")
+	public String submitData(@ModelAttribute("car")
+								Car car) {
+		return "result";
+	}
+	
+	
+	
+	
 }

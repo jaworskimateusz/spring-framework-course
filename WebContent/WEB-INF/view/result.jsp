@@ -12,21 +12,12 @@ pageEncoding="ISO-8859-1"%>
 </head>
 <body>
 <main>
-	<h2>Welcome, we analysed your request!</h2> <br>
+	<h2>Welcome, we analysed your request!</h2> <hr>
+	Hi ${person.name}! <br>
+	You are looking for: ${car.brand} <br>
+	which year is: ${car.year}
 	
-	You are looking for: ${brand} <br>
-	
-	which year is: ${year} <br>
-	
-	We will send you our offers on this email: ${email} <br>
-	
-	<h5>Mayby you will be interested these cars:<h5>
-	
-		<c:if test="${not empty cars}">
-			<c:forEach items="${cars}" var="car">
-			   	${car}<br>
-			</c:forEach>	    
-		</c:if>		
+
 	<br>
 	Best wishes! Team "Fasters" ;)
 	<img src="${pageContext.request.contextPath}/resources/images/car.jpg" alt="car"> 
@@ -34,3 +25,13 @@ pageEncoding="ISO-8859-1"%>
 </main>
 </body>
 </html>
+
+<!-- 
+	<h5>Mayby you will be interested these cars:<h5>
+	
+		<c:if test="${not empty cars}">
+			<c:forEach items="${cars}" var="car">
+			   	${car}<br>
+			</c:forEach>	    
+		</c:if>		
+-->

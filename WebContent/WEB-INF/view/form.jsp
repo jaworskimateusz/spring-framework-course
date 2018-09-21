@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +10,23 @@
 </head>
 <body>
 <main>
+	<form:form action="submitData" modelAttribute="car">
+	
+		<%-- Name: <form:input path="person" /> --%>
+		Brand: <form:input path="brand" /> 
+		<br/><br/>
+		Year:
+		<form:select path="year">
+			<option value="NONE">--- Select ---</option>
+			<form:options items="${car.years}" />
+		</form:select>
+		
+		<input type="submit" value="Submit" />
+	</form:form>
+</main>
+</body>
+</html>
+<!--
 	<form action="submitData" method="GET">
 		<input type="text" name="carBrand" 
 			   placeholder="Enter car's brand" >
@@ -17,7 +35,5 @@
 		<input type="text" name="email" 
 			   placeholder="Enter your email" >
 		<input type="submit" value="Find" >
-	</form>
-</main>
-</body>
-</html>
+	</form> 
+ -->
