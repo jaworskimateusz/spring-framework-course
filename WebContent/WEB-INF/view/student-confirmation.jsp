@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +13,17 @@
 	<br>			
 			      
 	The country is:		      ${student.country}
-
+	<br>
+	
+	His/her favourite programming language is: ${student.favouriteLanguage}
+	<br>
+	
+	Acquainted with:
+	<ul>
+		<c:forEach var="systemName" items="${student.operatingSystems}">
+			<li> ${systemName} </li>
+		</c:forEach>
+	</ul>
+	
 </body>
 </html>
