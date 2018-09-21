@@ -8,8 +8,10 @@
 	<h2>Confirmation</h2> <hr>
 	
 	The student is confirmed: ${student.firstName} 
-						      ${student.lastName}
-						      ${student.country}
+						      ${student.lastName} 
+	<br>			
+			      
+	The country is:		      ${student.country}
 
 </body>
 </html>
