@@ -7,6 +7,8 @@ public class Car {
 	private String brand;
 	private LinkedHashMap<String, String> years;
 	private String year;
+	private LinkedHashMap<String, String> engine;
+	private String gearbox;
 	
 	public Car() {
 		fillYears();
@@ -42,5 +44,21 @@ public class Car {
 	public void setYears(LinkedHashMap<String, String> years) {
 		this.years = years;
 	}
-	
+
+	public String getGearbox() {
+		return gearbox;
+	}
+
+	public void setGearbox(String gearbox) {
+		this.gearbox = gearbox;
+	}
+
+	public LinkedHashMap<String, String> getEngine() {
+		return engine;
+	}
+
+	public void setEngine(LinkedHashMap<String, String> engine) {
+		this.engine = engine;
+	}
+
 }

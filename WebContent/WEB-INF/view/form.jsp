@@ -14,14 +14,29 @@
 	
 		<%-- Name: <form:input path="person" /> --%>
 		Brand: <form:input path="brand" /> 
-		<br/><br/>
+		<br><br>
 		Year:
 		<form:select path="year">
 			<option value="NONE">--- Select ---</option>
 			<form:options items="${car.years}" />
 		</form:select>
+		<br><br>
 		
+		Condition:
+		<br>
+		<form:radiobutton path="gearbox" value="automatic"/>
+		Automatic Transmission
+		<br>
+		<form:radiobutton path="gearbox" value="manual"/>
+		Manual Transmission
+		<br><br>
+		
+		Engine:
+		<br>
+		<form:checkboxes items="${engines}" path="engine"/> 
+		<br><br>
 		<input type="submit" value="Submit" />
+		
 	</form:form>
 </main>
 </body>

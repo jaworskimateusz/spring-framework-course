@@ -1,19 +1,18 @@
 package com.luv2code.springdemo.mvc.training;
 
-//import java.util.ArrayList;
-//import java.util.List;
-
+import java.util.LinkedHashMap;
+import org.springframework.beans.factory.annotation.Value;
 //import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/training")
 public class TrainingController {
+	@Value("#{engineKind}")
+	private LinkedHashMap<String, String> engineKind;
 
 	@RequestMapping("/car")
 	public String getHomePage() {
@@ -23,6 +22,7 @@ public class TrainingController {
 	@RequestMapping("/carForm")
 	public String showForm(Model model) {
 		model.addAttribute("car", new Car());
+		model.addAttribute("engines", engineKind);
 		return "form";
 	}
 	/*

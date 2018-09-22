@@ -13,11 +13,23 @@ pageEncoding="ISO-8859-1"%>
 <body>
 <main>
 	<h2>Welcome, we analysed your request!</h2> <hr>
-	Hi ${person.name}! <br>
-	You are looking for: ${car.brand} <br>
-	which year is: ${car.year}
+	Hi ${person.name}! 
+	<br>
 	
-
+	You are looking for: ${car.brand}
+		 
+	which year is: ${car.year}
+	<br>
+	The gearbox: ${car.gearbox}
+	<br>
+	Engine kinds:<br>
+	
+	<c:forEach var="engine" items="${car.engine}">
+		<ul>
+			<li> ${engine.value} </li>
+		</ul>
+	</c:forEach> 
+	
 	<br>
 	Best wishes! Team "Fasters" ;)
 	<img src="${pageContext.request.contextPath}/resources/images/car.jpg" alt="car"> 
