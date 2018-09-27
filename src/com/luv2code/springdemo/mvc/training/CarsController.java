@@ -33,7 +33,8 @@ public class CarsController {
 							  @ModelAttribute("sportCar") 
 							  SportCar sportCar, 
 							  BindingResult bindingResult) {
-		
+		sportCar.setVin(sportCar.getVin().toUpperCase());
+		System.out.println(bindingResult);
 		if(bindingResult.hasErrors()) {
 			return "car-form";
 		} else {

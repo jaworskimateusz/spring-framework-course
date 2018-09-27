@@ -27,7 +27,10 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	<util:properties id="engineKind" location="classpath:../engine.properties" /> 
-
+	<bean id="messageSource"
+		  class="org.springframework.context.support.ResourceBundleMessageSource">
+		  <property name="basenames" value="resources/messages" />
+	</bean>
 </beans>
 
 

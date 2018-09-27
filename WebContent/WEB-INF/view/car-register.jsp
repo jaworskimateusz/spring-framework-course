@@ -17,6 +17,9 @@ pageEncoding="ISO-8859-1"%>
 	You are looking for: ${sportCar.brand}
 		 
 	and it has ${sportCar.color} color!<br>
+	Specifications: <br>
+	Horsepower: ${sportCar.horsepower} <br>
+	VIN: ${sportCar.vin}<br>
 	
 	Great choice!
 	<br><br>
