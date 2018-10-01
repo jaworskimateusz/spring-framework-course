@@ -27,7 +27,11 @@
 		VIN: <form:input path="vin" />
 		<form:errors path="vin" cssClass="error" />
 		<br><br>
+		Location: <form:input path="location" />
+		<form:errors path="location" cssClass="error"/>
+		<br><br>
 		<input type="submit" value="Submit" />
+
 		
 	</form:form>
 </main>

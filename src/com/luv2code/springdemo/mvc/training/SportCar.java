@@ -6,6 +6,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.luv2code.springdemo.mvc.training.validation.Location;
+
 public class SportCar {
 	
 	@NotNull(message="Required.")
@@ -23,6 +25,9 @@ public class SportCar {
 	@NotNull(message="Required.")
 	@Pattern(regexp="^[a-zA-Z0-9]{17}", message="VIN number is 17 chars/digs long.")
 	private String vin;
+	
+	@Location
+	private String location;
 	
 	public SportCar() {
 	}
@@ -57,6 +62,14 @@ public class SportCar {
 
 	public void setVin(String vin) {
 		this.vin = vin;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
 	}
 	
 }

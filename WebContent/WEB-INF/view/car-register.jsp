@@ -20,6 +20,7 @@ pageEncoding="ISO-8859-1"%>
 	Specifications: <br>
 	Horsepower: ${sportCar.horsepower} <br>
 	VIN: ${sportCar.vin}<br>
+	Location: ${sportCar.location}<br>
 	
 	Great choice!
 	<br><br>
